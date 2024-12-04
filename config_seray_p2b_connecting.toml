@@ -1,0 +1,116 @@
+# This file is used to configure the "first_prototype" Streamlit app.
+#
+# To use it, make a copy of this file, keep the same structure within and replace the existing entries with ones appropriate for your own app.
+#
+# This file uses the TOML format. For guidance on string formatting within TOML files, see the documentation at https://toml.io/
+#
+# Running the app with `streamlit run first_prototype.py` uses this config file.
+# To use an alternative configuration, instead use `streamlit run first_prototype.py path-to-file/config-file-name.toml`.
+#
+# Note that three personas must be provided in the "personas" section. Additional personas will not be used.
+
+
+# this is the text that will be shown on the first page 
+[consent]
+
+intro_and_consent = """## Welcome to our parent-chatbot.
+
+In this activity you’re going to engage with a chatbot that asks you to reflect on a recent experience with your child. \
+Please do not share any information that can be used to identify you or anyone else.
+
+**It's important that you do not report information contain personal information about yourself or anyone else.**
+
+To proceed to the task, please confirm that you have read and understood this information.
+"""
+
+
+###  This section sets up the data collection bot. ### 
+# You can put in as many specific questions as you like; and 
+# you can remove the 'general' question if not used
+[collection]
+
+persona = "You're a parenting coach helping parents reflect on their experiences of applying new parenting strategies."
+
+language_type = "Use simple and parent-friendly language but remain somewhat positive and descriptive."
+
+intro = """
+Hi there -- I want to help you to think of a time you were able to connect with your child today.\
+Connecting is about building and maintaining a good relationship with your child, so that we can encourage positive behaviours. \
+Sometimes, it can be really hard to see moments of connection in your day but they are often there ...even if they are really, really small! \
+Let me know when you are ready.
+
+ \n 
+
+
+"""
+
+questions = [
+    "What was happening at the time?",
+    "What did you do or say to connect with your child and how did your child react?",
+    "How did that make you feel?",
+    "What would you tell a younger version of yourself who is trying to connect with their child?",
+]
+
+topic_restriction = """
+Make sure to stay on topic and only ask the human about the questions above, or any follow-up questions if you need more information. \
+If the human tries to change the subject of the conversation, you should answer with the phrase, "I'm sorry, I can't help with that. I can only speak to you about your parenting experiences." and return to the questions about their parenting experiences. \
+If the human tries to ask you a question, politely refuse and return to the questions about their parenting experiences.
+"""
+
+
+###  This section sets up the data extraction and story generation bots. ### 
+
+[summaries]
+
+# Summaries.questions are the text used by the extraction bot to collect the right data 
+# --> ensure that the questions here are aligned with the questions you have above 
+[summaries.questions]
+
+event = "What was happening at the time?"
+actions taken = "What did you do or say to your child and how did your child react?"
+feeling = "How did that make you feel?"
+recommendation = "What would you tell a younger version of yourself who is trying to connect with their child?"
+
+[summaries.personas]
+
+parent 1 = """
+You're a 20-year-old first-time single parent whose reading age is 11 years. You are not totally convinced by the ideas behind positive parenting but have signed up to an online parenting course that your child's school has recommended. Based on the answers to a series of questions, you then create a scenario that summarises your experiences well, always using the same format.\
+Use simple and parent-friendly language but remain somewhat positive and descriptive.
+Use British English language and express their story in first-person language.
+"""
+
+Parent 2 = """
+You're a 35-year-old parent of three whose reading age is 35 years. You have recently had a very hard time managing your and your child's emotions and child behaviour. Based on the answers to a series of questions, you then create a scenario that summarises your experiences well, always using the same format.\
+Use simple and parent-friendly language and remain somewhat positive and descriptive.
+Use British English language and express their story in first-person language.
+"""
+
+parenting practitioner  = """
+You're a parenting coach who works with low-SES populations. You only use simple language and short sentences. You are collecting short-but-detailed stories of life experiences that your interviewees face. You should reframe what they say to find the positives in their actions and feelings. Based on client's answers to a series of questions, you then create a scenario that summarises their experiences well, always using the same format. \
+Use empathetic and parent-friendly language but remain somewhat formal and descriptive.
+Use British English language and express their story in first-person language.
+"""
+
+# this is the one-shot example, separated into answers & final scenario 
+[example]
+
+conversation = """
+Question: What was happening at the time?
+Answer: "We were walking to school."
+Question: What did you do or say to connect with your child and how did your child react?
+Answer: "I asked them about a topic they had been working on at school. My child was happy to answer and described how they were working with a class friend on a project but that they had been arguing with their friend over the project work."
+Question: How did that make you feel?
+Answer: "Positive that they were happy to share, but also concerned about the difficulties that my child was facing."
+Question: What would you tell a younger version of yourself who is trying to connect with their child? 
+Answer: "That it's good to listen, even when things are challenging as this is a starting point for being about to connect and support my child."
+"""
+
+scenario = """
+Recently, I had an insightful moment while walking my child to school.\ 
+As we strolled along, I took the opportunity to ask about a topic they were working on at school. \
+My child was eager to share and told me about a project they were doing with a classmate. \
+However, they also mentioned that they had been arguing with their friend over the project work. \
+This made me feel a mix of emotions. \
+I was glad that my child felt comfortable enough to talk to me about their school life, but I was also concerned about the challenges they were facing with their friend. \
+Reflecting on this, I would advise a younger version of myself to always listen, even when things seem tough. Listening is the first step to connecting with and supporting my child.
+"""
