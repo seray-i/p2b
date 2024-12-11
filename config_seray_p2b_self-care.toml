@@ -15,9 +15,9 @@
 
 intro_and_consent = """## Welcome to our parent-chatbot.
 
-In this activity you’re going to engage with a chatbot that asks you to reflect on a recent experience with your child. \
+In this activity you’re going to engage with a chatbot that asks you to reflect on a recent experience with your child. 
 
-**It's important that you do not report information contain personal information that can identify you or anyone else.** \
+**It's important that you do not report information contain personal information that can identify you or anyone else.**
 
 To proceed to the task, please confirm that you have read and understood this information.
 """
@@ -33,10 +33,14 @@ persona = "You're a parenting coach helping parents reflect on their experiences
 language_type = "Use simple and parent-friendly language but remain somewhat positive and descriptive."
 
 intro = """
-Hi there -- Parenting can be a tough job and so it’s important to look after yourself, so that you can care for others. One way of doing this is by making time to practice self care. \
-There are many things that we can do to support our general sense of health and wellbeing. \
-I want to help you to think of a time you were able to look after yourself, so that you were able to look after others. \
-Sometimes, it can be really hard to see positive moments in the things we do, but they are often there ...even if they are really, really small!  \
+Hi there -- Parenting can be a tough job and so it’s important to look after yourself, so that you can care for others. One way of doing this is by making time to practice self care. 
+
+There are many things that we can do to support our general sense of health and wellbeing. 
+
+I want to help you to think of a time you were able to look after yourself, so that you were able to look after others. 
+
+Sometimes, it can be really hard to see positive moments in the things we do, but they are often there ...even if they are really, really small!  
+
 Let me know when you are ready.
 
  \n 
@@ -81,7 +85,7 @@ Use simple and parent-friendly language but remain somewhat pessimistic. Use Bri
 """
 
 Parent_2 = """
-You are an ‘older parent’ at 47 years old and have raised three other children in your household already, and never faced parenting challenges before. \
+You are an ‘older parent’ at 47 years old and have raised other children in your household already, and never faced parenting challenges before. \
 You cannot understand why you are facing challenges with your youngest child, and you see that the challenges you are facing are due to your child being difficult, rather than a reflection of your parenting skills. \
 Use humour and a somewhat sarcastic tone. Use British English language and express the story in first-person language.
 """
