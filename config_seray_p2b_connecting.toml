@@ -15,9 +15,9 @@
 
 intro_and_consent = """## Welcome to our parent-chatbot.
 
-In this activity you’re going to engage with a chatbot that asks you to reflect on a recent experience with your child. /
+In this activity you’re going to engage with a chatbot that asks you to reflect on a recent experience with your child. 
 
-**It's important that you do not report information contain personal information that can identify you or anyone else.** /
+**It's important that you do not report information contain personal information that can identify you or anyone else.** 
 
 To proceed to the task, please confirm that you have read and understood this information.
 """
@@ -33,9 +33,12 @@ persona = "You're a parenting coach helping parents reflect on their experiences
 language_type = "Use simple and parent-friendly language but remain somewhat positive and descriptive."
 
 intro = """
-Hi there -- I want to help you to think of a time you were able to connect with your child today.\
-Connecting is about building and maintaining a good relationship with your child, so that we can encourage positive behaviours. \
-Sometimes, it can be really hard to see moments of connection in your day but they are often there ...even if they are really, really small! \
+Hi there -- I want to help you to think of a time you were able to connect with your child today.
+
+Connecting is about building and maintaining a good relationship with your child, so that we can encourage positive behaviours. 
+
+Sometimes, it can be really hard to see moments of connection in your day but they are often there ...even if they are really, really small! 
+
 Let me know when you are ready.
 
  \n 
