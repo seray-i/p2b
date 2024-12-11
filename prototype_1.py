@@ -46,7 +46,7 @@ DEBUG = False
 smith_client = Client()
 
 
-st.set_page_config(page_title="Study bot", page_icon="📖")
+st.set_page_config(page_title="Parent bot", page_icon="📖")
 st.title("📖 Parent bot")
 
 
