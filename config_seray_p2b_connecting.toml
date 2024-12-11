@@ -15,9 +15,9 @@
 
 intro_and_consent = """## Welcome to our parent-chatbot.
 
-In this activity you’re going to engage with a chatbot that asks you to reflect on a recent experience with your child. \
+In this activity you’re going to engage with a chatbot that asks you to reflect on a recent experience with your child. /
 
-**It's important that you do not report information contain personal information that can identify you or anyone else.** \
+**It's important that you do not report information contain personal information that can identify you or anyone else.** /
 
 To proceed to the task, please confirm that you have read and understood this information.
 """
